@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fate of the New Year</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="snow"></canvas>
+<canvas id="fireworks"></canvas>
+
+<div id="overlay" class="modal">
+  <div class="modal-content">
+    <h1>🎆 Fate of the New Year</h1>
+    <p>Your fate will be decided by your focus.</p>
+    <button onclick="startCountdown()">Begin</button>
+  </div>
+</div>
+
+<div id="countdown" class="hidden">3</div>
+
+<div id="game">
+  <div id="timer">10</div>
+  <div id="orb" onclick="hitOrb()">🎁</div>
+</div>
+
+<div id="result" class="hidden">
+  <h1 id="fortuneTitle"></h1>
+  <p id="fortuneText"></p>
+
+  <div id="leaderboard">
+    <h2>🏆 Top Players</h2>
+    <ul id="scores"></ul>
+  </div>
+
+  <button onclick="copyResult()">Copy Result</button>
+  <button onclick="location.reload()">Play Again</button>
+</div>
+
+<audio id="clickSound" src="assets/click.mp3"></audio>
+
+<script src="snow.js"></script>
+<script src="fireworks.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
